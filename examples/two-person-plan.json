@@ -1,0 +1,46 @@
+{
+  "characters": ["A", "B"],
+  "assets": [
+    {"id": "person-a", "role": "identity", "character": "A", "file": "media/person-a.png"},
+    {"id": "person-b", "role": "identity", "character": "B", "file": "media/person-b.png"},
+    {"id": "room", "role": "scene", "file": "media/room.png"},
+    {"id": "points", "role": "blocking", "file": "media/room-points.png"},
+    {"id": "cameras", "role": "camera", "file": "media/camera-map.png"}
+  ],
+  "cameras": ["C0", "CA", "CB"],
+  "dialogue": [
+    {"id": "L1", "speaker": "A", "text": "这本书你看完了吗？"},
+    {"id": "L2", "speaker": "B", "text": "看完了。"},
+    {"id": "L3", "speaker": "B", "text": "封面。"}
+  ],
+  "segments": [
+    {
+      "id": "S1", "characters": ["A", "B"],
+      "input_assets": ["person-a", "person-b", "room", "points", "cameras"],
+      "duration": 3.0,
+      "entry_state": "A在A1左座，B在B1右座，两人手空，书合拢放在桌面P1。",
+      "exit_state": "A问完闭嘴看B，B准备答，书未动。",
+      "shots": [
+        {"id": "H01", "start": 0.0, "end": 3.0, "camera": "C0", "blocking": {"A": "A1", "B": "B1"}, "speech": [
+          {"line_id": "L1", "speaker": "A", "text": "这本书你看完了吗？", "start": 0.1, "end": 2.8, "mode": "on"}
+        ]}
+      ]
+    },
+    {
+      "id": "S2", "characters": ["A", "B"],
+      "input_assets": ["person-a", "person-b", "room", "points", "cameras"],
+      "duration": 3.6,
+      "entry_state": "承接A问完的姿态，A1/B1不变，B开口前未点头。",
+      "exit_state": "A听完封面后愣住，B闭嘴，书始终在P1。",
+      "shots": [
+        {"id": "H02", "start": 0.0, "end": 1.4, "camera": "CB", "blocking": {"A": "A1", "B": "B1"}, "speech": [
+          {"line_id": "L2", "speaker": "B", "text": "看完了。", "start": 0.1, "end": 1.1, "mode": "on"}
+        ]},
+        {"id": "H03", "start": 1.4, "end": 2.6, "camera": "CA", "blocking": {"A": "A1", "B": "B1"}, "speech": [
+          {"line_id": "L3", "speaker": "B", "text": "封面。", "start": 0.2, "end": 0.9, "mode": "off"}
+        ]},
+        {"id": "H04", "start": 2.6, "end": 3.6, "camera": "CA", "blocking": {"A": "A1", "B": "B1"}, "speech": []}
+      ]
+    }
+  ]
+}

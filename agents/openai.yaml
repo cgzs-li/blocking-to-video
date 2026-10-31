@@ -1,0 +1,4 @@
+interface:
+  display_name: "标点机位驱动视频"
+  short_description: "用人物、场景、标点和俯视机位图编译连续的分段视频提示词"
+  default_prompt: "使用 $blocking-to-video，按我的已确认剧本与实际资产，用核心五图直接引用的方式编写逐镜分段视频提示词。"
