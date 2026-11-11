@@ -6,6 +6,8 @@
 
 喜欢这个项目，可以[扫码赞助或联系作者](SUPPORT.md)。使用Skill免费；赞助完全自愿。
 
+**当前版本：0.2.0。** 新增直接参考生产与实片迭代流程：按镜头补最小资产，区分剪辑镜头与生成段，逐镜核人物可见性、背景朝向、表演和道具状态；依据实际成片局部修订并接续。
+
 ## 核心做法
 
 两人场景使用**核心五图**：两张人物身份图、一张纯场景母图、一张实际母图标点图、一张俯视机位图。每段直接引用五图，每镜写明标点与机位的对应关系。
@@ -40,6 +42,7 @@ flowchart LR
 
 - [SKILL.md](SKILL.md)：技能主指令。
 - [空间资产](references/spatial-assets.md)：母图、标点、机位。
+- [直接参考生产与实片迭代](references/direct-reference-production.md)：最小资产、模型时长、人物在场、背景与运镜、分层审片和局部修订。
 - [视频提示词](references/video-prompts.md)：逐镜表演与文字接续。
 - [分段模板](templates/segment-prompt.md)：可填写的提示词结构。
 - [虚构示例](examples/two-person-prompt.md)：五图与逐镜引用示范，不含图片。
